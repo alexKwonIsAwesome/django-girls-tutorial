@@ -1,0 +1,8 @@
+<div>
+  {% if post.published_date %}
+    <div>{{ post.published_date }}</div>
+  {% endif %}
+  <a href="{% url "post_edit" pk=post.pk %}">Edit Post</a>
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.text | linebreaksbr }}</p>
+</div>
